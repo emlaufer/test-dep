@@ -1,0 +1,6 @@
+EntitySuccessMessage,read$,95, false
+EntitySuccessMessage,DeadBorrowToken$,2, false
+EntitySuccessMessage,builtin$havoc_int,25, false
+EntitySuccessMessage,builtin$havoc_ref,25, false
+EntitySuccessMessage,builtin$havoc_bool,25, false
+EntitySuccessMessage,m_test,28, false

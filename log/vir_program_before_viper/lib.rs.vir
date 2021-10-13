@@ -1,0 +1,38 @@
+method builtin$havoc_bool() returns (ret: Bool);
+
+method builtin$havoc_int() returns (ret: Int);
+
+method builtin$havoc_ref() returns (ret: Ref());
+
+struct_predicate i32(self){
+  (acc(self.val_int, write)) && (((-2147483648) <= (self.val_int)) && (((self.val_int) <= (2147483647)) && (true)))
+}
+
+
+struct_predicate bool(self){
+  (acc(self.val_bool, write)) && (true)
+}
+
+
+struct_predicate tuple2$i32$bool(self){
+  (acc(self.tuple_0, write)) && ((acc(i32(self.tuple_0), write)) && ((acc(self.tuple_1, write)) && ((acc(bool(self.tuple_1), write)) && (true))))
+}
+
+
+struct_predicate tuple0$(self){
+  true
+}
+
+
+method m_test(0 args)
+    returns (_0: Ref(tuple0$))
+{
+  label stub // 0
+    // ========== stub ==========
+    // Def path: "dep::test"
+    // Span: /home/evan/research/tmp/dep/src/lib.rs:2:1: 4:2 (#0)
+    Return
+  label end_of_method
+}
+
+
